@@ -3,7 +3,7 @@
 
 \PassOptionsToPackage{svgnames}{xcolor}
 % 暂时添加 handout，方便调试
-\LoadClass[compress, 10pt,aspectratio=169,handout]{ctexbeamer}
+\LoadClass[compress, 10pt,aspectratio=169]{ctexbeamer}
 
 %% Putting the background image in the frames
 %% Global background setting
@@ -191,4 +191,21 @@
       \href{mailto:#1}{#1}
     }
 }
+
+
+\setbeamerfont{title}{size=\huge, series=\bfseries}
+\setbeamerfont*{subtitle}{size=\large, shape=\itshape}
+\setbeamerfont{section title}{size=\Large, series=\bfseries}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont{caption}{size=\footnotesize, series=\bfseries}
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamerfont{alerted text}{series=\bfseries}
+
+\setCJKmainfont{Source Han Serif SC}[
+  UprightFont     = * SemiBold,
+  BoldFont        = * Heavy,
+  ItalicFont      = * SemiBold,
+  BoldItalicFont  = * SemiBold,
+  RawFeature      = +fwid]
+
 

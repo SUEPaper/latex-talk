@@ -1,4 +1,37 @@
 \section{进阶扩展}
+\subsection{beamer}
+\begin{frame}[fragile]
+  \frametitle{幻灯片}
+  \begin{itemize}
+    \item<+-> 基本框架
+  
+      \begin{itemize}
+        \item \pkg{beamer} 或 \pkg{ctexbeamer} 文档类
+        \item 页面由 |frame| 环境组织
+        \item 文本内容：建议使用 |itemize| 和 |enumerate|
+        \item 图表：不再浮动，不建议使用交叉引用
+        \item 定理及强调：|theorem|、|proof|、|block| 等
+        \item 分栏：|columns| + |column| 环境
+      \end{itemize}
+  
+    \item<+-> 主题与样式
+  
+      \begin{itemize}
+        \item |\usetheme|、\lstinline[style=style@inline]+\use[font|color|inner|outer]theme+
+        \item 更现代的主题：|metropolis|
+        \item 使用「默认」字体：|\usefonttheme{serif}|
+      \end{itemize}
+  
+    \item<+-> 动画（覆盖）
+  
+      \begin{itemize}
+        \item |\pause| 命令
+        \item |\onslide<1>|、|\item<1->| 等
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+  
+  
 
 % \begin{frame}[fragile]
 % \frametitle[Markdown]{%
@@ -69,7 +102,7 @@
 % \end{columns}
 % \vspace{-0.6cm}
 % \end{frame}
-
+\subsection{git}
 \begin{frame}[fragile]
 \frametitle{Git}
 \begin{itemize}

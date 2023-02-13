@@ -1,126 +1,123 @@
 \section{宏包}
-\subsection{宏包和TexLive发行版的关系}
-\begin{frame}{宏包是什么}
-    % itemize
-    很多时候需要自己安装宏包
+
+\begin{frame}[fragile]
+\frametitle{加载宏包}
+\begin{itemize}
+  \item<+-> 「宏」包
+
     \begin{itemize}
-        \item TexLive是包含了若干个常见的宏包和编译器的集合
-        \item 许多的宏包是发行版没有预装的
-        \item 宏包需要更新（TEX Live 升级间隔的尴尬时期，或者宏包有重大变化）
-    \end{itemize}
-    宏包管理软件tlmgr
-    \begin{itemize}
-        \item<+-> Windows
-            \begin{itemize}
-              \item 开始菜单里找 TeX Live Manager
-              \item 设置仓库地址 \texttt{tlmgr option repository https://mirrors.sustech.edu.cn/CTAN/systems/texlive/tlnet}
-              \item \texttt{tlmgr install <pkgname>} 安装、 \texttt{tlmgr update --self --all} 全部更新
-            \end{itemize}
-        \item<+-> Mac
-          \begin{itemize}
-              \item 开始菜单里找 CTeX / MiKTeX -> Package Manager
-              \item 在 WinEdt 里 MiKTeX \texttt{Options -> Packages}
-        \end{itemize}
-        
+      \item 提供扩展功能的组件
+      \item 也就是别人造好的轮子
+      \item 形式上为 |.sty| 扩展名的纯文本文件
     \end{itemize}
 
-    
+  \item<+-> 怎么用
 
-    \vspace{0.4cm} % vertical space
+    \begin{itemize}
+      \item |\usepackage{ctex}|
+      \item 小心载入顺序
+    \end{itemize}
+
+  \item<+-> 哪里找？
+
+    \begin{itemize}
+      \item The Comprehensive \TeX Archive Network \link{https://ctan.org/}
+      \item GitHub
+      \item<+-> 教程、博客、帖子（\alert{留意时效性}）
+    \end{itemize}
+\end{itemize}
 \end{frame}
 
-{\nologo
-  \begin{frame}[fragile]
-    \frametitle{宏包推荐（\textbf{先读文档}后使用）}
-    % \vspace{-1em}
-    \hspace{-3.5em}
-    \begin{minipage}[t]{1.2\linewidth}%
-      \begin{multicols}{3}
-        \begin{itemize}
-          \item 必备
-    
-            \begin{itemize}
-              \item \pkg{amsmath公式}
-              \item \pkg{graphicx插图}
-              \item \pkg{hyperref超链接}
-            \end{itemize}
-    
-          \item 样式
-    
-            \begin{itemize}
-              \item \pkg{caption图注}
-              \item \pkg{enumitem列表}
-              \item \pkg{fancyhdr页眉页脚}
-              \item \pkg{footmisc脚注}
-              \item \pkg{geometry页面规格（纸张，边距）}
-              \item \pkg{titlesec标题格式}
-            \end{itemize}
-    
-          \item 数学
-    
-            \begin{itemize}
-              \item \pkg{bm粗体数学符号}
-              \item \pkg{mathtools公式增强}
-              \item \pkg{physics物理符号增强}
-              \item \pkg{unicode-math数学符号（unicode模式）}
-            \end{itemize}
-    
-          \item 表格
-    
-            \begin{itemize}
-              \item \pkg{array}
-              \item \pkg{booktabs表格高级样式}
-              \item \pkg{longtable跨页表格}
-              \item \pkg{tabularx可变宽度表}
-            \end{itemize}
-    
-          \item 插图、绘图
-    
-            \begin{itemize}
-              \item \pkg{float}
-              \item \pkg{pdfpages嵌入PDF}
-              \item \pkg{standalone}
-              \item \pkg{subfig子图片}
-              \item \pkg{pgf}/\pkg{tikz流程图}
-              \item \pkg{pgfplots通用数据作图}
-            \end{itemize}
-    
-          \item 字体
-    
-            \begin{itemize}
-              \item \pkg{newpx}
-              \item \pkg{pifont}
-              \item \pkg{fontspec引入/声明外部字体}
-            \end{itemize}
-    
-          \item 各种功能
-    
-            \begin{itemize}
-              \item \pkg{algorithm2e伪代码}
-              \item \pkg{beamer幻灯片}
-              \item \pkg{biblatex引文}
-              \item \pkg{listings列表}
-              \item \pkg{mhchem化学式}
-              \item \pkg{microtype缩进控制}
-              \item \pkg{minted代码高亮}
-              \item \pkg{natbib印文}
-              \item \pkg{siunitx度量衡}
-              \item \pkg{xcolor定义颜色}
-            \end{itemize}
-    
-          \item 多语言
-    
-            \begin{itemize}
-              \item \pkg{babel}
-              \item \pkg{polyglossia}
-              \item \pkg{ctex}
-              \item \pkg{xeCJK中日韩文字}
-            \end{itemize}
-        \end{itemize}
-      \end{multicols}
-    \end{minipage}
-  \end{frame}
-}
+\begin{frame}[fragile]
+  \frametitle{宏包推荐（\textbf{先读文档}后使用）}
+  % \vspace{-1em}
+  \hspace{-3.5em}
+  \begin{minipage}[t]{1.2\linewidth}%
+    \begin{multicols}{3}
+      \begin{itemize}
+        \item 必备
+  
+          \begin{itemize}
+            \item \pkg{amsmath公式}
+            \item \pkg{graphicx插图}
+            \item \pkg{hyperref超链接}
+          \end{itemize}
+  
+        \item 样式
+  
+          \begin{itemize}
+            \item \pkg{caption图注}
+            \item \pkg{enumitem列表}
+            \item \pkg{fancyhdr页眉页脚}
+            \item \pkg{footmisc脚注}
+            \item \pkg{geometry页面规格（纸张，边距）}
+            \item \pkg{titlesec标题格式}
+          \end{itemize}
+  
+        \item 数学
+  
+          \begin{itemize}
+            \item \pkg{bm粗体数学符号}
+            \item \pkg{mathtools公式增强}
+            \item \pkg{physics物理符号增强}
+            \item \pkg{unicode-math数学符号（unicode模式）}
+          \end{itemize}
+  
+        \item 表格
+  
+          \begin{itemize}
+            \item \pkg{array}
+            \item \pkg{booktabs表格高级样式}
+            \item \pkg{longtable跨页表格}
+            \item \pkg{tabularx可变宽度表}
+          \end{itemize}
+  
+        \item 插图、绘图
+  
+          \begin{itemize}
+            \item \pkg{float}
+            \item \pkg{pdfpages嵌入PDF}
+            \item \pkg{standalone}
+            \item \pkg{subfig子图片}
+            \item \pkg{pgf}/\pkg{tikz流程图}
+            \item \pkg{pgfplots通用数据作图}
+          \end{itemize}
+  
+        \item 字体
+  
+          \begin{itemize}
+            \item \pkg{newpx}
+            \item \pkg{pifont}
+            \item \pkg{fontspec引入/声明外部字体}
+          \end{itemize}
+  
+        \item 各种功能
+  
+          \begin{itemize}
+            \item \pkg{algorithm2e伪代码}
+            \item \pkg{beamer幻灯片}
+            \item \pkg{biblatex引文}
+            \item \pkg{listings列表}
+            \item \pkg{mhchem化学式}
+            \item \pkg{microtype缩进控制}
+            \item \pkg{minted代码高亮}
+            \item \pkg{natbib印文}
+            \item \pkg{siunitx度量衡}
+            \item \pkg{xcolor定义颜色}
+          \end{itemize}
+  
+        \item 多语言
+  
+          \begin{itemize}
+            \item \pkg{babel}
+            \item \pkg{polyglossia}
+            \item \pkg{ctex}
+            \item \pkg{xeCJK中日韩文字}
+          \end{itemize}
+      \end{itemize}
+    \end{multicols}
+  \end{minipage}
+\end{frame}
 
 \begin{frame}[fragile]{宏包示例: Tikz (画图)}
     \vspace{-2em}

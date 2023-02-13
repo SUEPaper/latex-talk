@@ -1,11 +1,42 @@
-\section{中文写作}
-\begin{frame}{有关中文写作}
-\begin{itemize}
-    \item 宏包 \pkg{xeCJK}
-    \item 参考 \url{https://www.overleaf.com/learn/latex/chinese}
-\end{itemize}
-\end{frame}
 
+\section{中文}
+\begin{frame}{中文支持}
+    \begin{itemize}
+      \item 中文有什么特殊？\pause
+  
+        \begin{itemize}
+          \item 汉字太多（92,856+）\pause
+          \item 横排 + 直排、标点禁则、行间注 \link{https://www.w3.org/TR/clreq}
+          % \pause
+          % \item \jatext{にほんご}、
+          %       {\NotoDevanagari देवनागरी}、
+          %       {\NotoArabic العَرَبِيَّة‎}、
+          %       {\NotoEgyptian 𓅡𓎡𓅱𓀀𓏪}
+        \end{itemize} \pause
+  
+      \item 已淘汰：
+  
+        \begin{itemize}
+          \item CCT 系统、\pkg{CJK} 宏包（裸用）
+          \item \CTeX{} 套装
+        \end{itemize} \pause
+  
+      \item 目前推荐手段：
+  
+        \begin{itemize}
+          \item \alert{\pkg{ctex} 宏集}（此 \pkg{ctex} 非彼 \CTeX{}）
+          \item \XeLaTeX{} 编译
+        \end{itemize} \pause
+  
+      \item 可以用，不推荐：
+  
+        \begin{itemize}
+          \item \pkg{xeCJK} 宏包（裸用）
+          \item \pkg{ctex} 宏集 + 其他引擎编译
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+  
 \begin{frame}[fragile]{中文示例}
   
     \begin{itemize}
@@ -18,12 +49,14 @@
 \begin{document}
 \TeX{}你好！
 \end{document}
-          \end{lstlisting}
+        \end{lstlisting}
+        \pause
+        
         \begin{itemize}
           \item Windows 下缺省使用中易字体
           \item Linux、macOS 下需要注意字体（参见 \pkg{ctex} 文档）
         \end{itemize}
-      \item 使用 \XeLaTeX{} 引擎编译，得到 PDF 文档
+          \item 使用 \XeLaTeX{} 引擎编译，得到 PDF 文档
         \begin{center}
           \fbox{\textrm \TeX{}\songti 你好！}
         \end{center}

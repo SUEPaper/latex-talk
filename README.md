@@ -1,6 +1,6 @@
 # 《LaTeX 入门到入门》 上海电力大学数学系LaTeX培训讲座
 
-[预览PDF(点此)](./main.pdf)
+[预览PDF(点此)](./lecture.pdf)
 
 ## 致谢
 

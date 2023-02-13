@@ -1,37 +1,25 @@
 \section{数学公式}
 
-\begin{frame}[fragile]{\LaTeX{} 数学公式}
+\begin{frame}[fragile]{\LaTeX{} 数学模式}
     \begin{itemize}
     \item 数学公式排版是 \LaTeX{} 的绝对强项
-    \item 数学排版需要进入数学模式，引用 \texttt{amsmath} 宏包，由美国数学学会(American Mathematical Society, AMS) 提供。
+    \item 一切数学公式都要在数学模式下输入，引用 \texttt{amsmath} 宏包，由美国数学学会(American Mathematical Society, AMS) 提供。
+    \pause
+    
+    \item 
         \begin{itemize}
-        \item 用单个美元符号(\verb|$|) 包围起来的内容是 {\bf 行内公式}
-      \item 用两个美元符号(\verb|$$|) （不推荐）或 \verb|\[ \]| 包围起来的是 {\bf 单行公式} 或 {\bf 行间公式}
-        \item 使用数学环境，例如 \texttt{equation} 环境内的公式会自动加上编号，
-            \texttt{align} 环境用于多行公式（例如方程组、多个并列条件等）
-      \end{itemize}
-    \item 寻找符号
-        \begin{itemize}
-          \item 运行 \texttt{texdoc symbols} 查看符号表
-          \item S. Pakin. \emph{The Comprehensive \LaTeX{} Symbol List}
-                \url{https://ctan.org/pkg/comprehensive}
-          \item 手写识别（有趣但不全）：Detexify \url{http://detexify.kirelabs.org}
+          \item 不受外界字体命令控制
+          \item 数学模式中空格不起作用，尽管用；但不能有空行
+          \item 建议始终调用 \pkg{amsmath} 宏包 \pause
+          \item \alert{不建议用 MathType 生成 \LaTeX{} 公式}
+          \item 但可以用 MathJax \link{https://www.mathjax.org} 或 KaTeX \link{https://katex.org} 练习
         \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{数学模式}
+\frametitle{数学公式}
 \begin{itemize}
-  \item 一切数学公式都要在数学模式下输入
-
-    \begin{itemize}
-      \item 不受外界字体命令控制
-      \item 数学模式中空格不起作用，尽管用；但不能有空行
-      \item 建议始终调用 \pkg{amsmath} 宏包 \pause
-      \item \alert{不建议用 MathType 生成 \LaTeX{} 公式}
-      \item 但可以用 MathJax \link{https://www.mathjax.org} 或 KaTeX \link{https://katex.org} 练习
-    \end{itemize} \pause
 
   \item 行内（inline）公式
 
@@ -215,26 +203,24 @@ V = \frac{4}{3}\pi r^3
 \end{frame}
 
 
-\begin{frame}[fragile]
-\frametitle{小露身手}
-  \begin{equation*}
-    \oint \mathscr{D}[x(t)] \sqrt{\frac{3 \pi^{2}-\sum_{q=0}^{\infty}(z+\hat{L})^{q} \exp \left(\mathrm{i}^{2} \hbar x\right)}{(\operatorname{Tr} \mathscr{A})\left(\Lambda_{j_{1} j_{2}}^{i_{1} i_{2}} \Gamma_{i_{1} i_{2}}^{j_{1} j_{2}} \hookrightarrow \vec{D} \cdot \mathrm{P}\right)}}=
-    \underbrace{\widetilde{\left\langle \frac{\notin \emptyset}
-    {\varpi\alpha_{k\uparrow}}\middle\vert
-    \frac{\partial_\mu T_{\mu\nu}}{2}\right\rangle}}_{\mathrm{K}_3
-    \mathrm{Fe}(\mathrm{CN})_6} ,\forall z \in \mathbb{R}
-  \end{equation*}
+% \begin{frame}[fragile]
+% \frametitle{小露身手}
+%   \begin{equation*}
+%     \oint \mathscr{D}[x(t)] \sqrt{\frac{3 \pi^{2}-\sum_{q=0}^{\infty}(z+\hat{L})^{q} \exp \left(\mathrm{i}^{2} \hbar x\right)}{(\operatorname{Tr} \mathscr{A})\left(\Lambda_{j_{1} j_{2}}^{i_{1} i_{2}} \Gamma_{i_{1} i_{2}}^{j_{1} j_{2}} \hookrightarrow \vec{D} \cdot \mathrm{P}\right)}}=
+%     \underbrace{\widetilde{\left\langle \frac{\notin \emptyset}
+%     {\varpi\alpha_{k\uparrow}}\middle\vert
+%     \frac{\partial_\mu T_{\mu\nu}}{2}\right\rangle}}_{\mathrm{K}_3
+%     \mathrm{Fe}(\mathrm{CN})_6} ,\forall z \in \mathbb{R}
+%   \end{equation*}
 
-  \begin{lstlisting}[basicstyle=\ttfamily\small]
-    \begin{equation} % \usepackage{unicode-math}
-        \oint \mathscr{D}[x(t)] \sqrt{\frac{3 \pi^{2}-\sum_{q=0}^{\infty}(z+\hat{L})^{q} \exp \left(\mathrm{i}^{2} \hbar x\right)}{(\operatorname{Tr} \mathscr{A})\left(\Lambda_{j_{1} j_{2}}^{i_{1} i_{2}} \Gamma_{i_{1} i_{2}}^{j_{1} j_{2}} \hookrightarrow \vec{D} \cdot \mathrm{P}\right)}}=
-        \underbrace{\widetilde{\left\langle \frac{\notin \emptyset}
-        {\varpi\alpha_{k\uparrow}}\middle\vert
-        \frac{\partial_\mu T_{\mu\nu}}{2}\right\rangle}}_{\mathrm{K}_3
-        \mathrm{Fe}(\mathrm{CN})_6} ,\forall z \in \mathbb{R}
-    \end{equation}
-    \end{lstlisting}
-
-
-\end{frame}
+%   \begin{lstlisting}[basicstyle=\ttfamily\small]
+%     \begin{equation} % \usepackage{unicode-math}
+%         \oint \mathscr{D}[x(t)] \sqrt{\frac{3 \pi^{2}-\sum_{q=0}^{\infty}(z+\hat{L})^{q} \exp \left(\mathrm{i}^{2} \hbar x\right)}{(\operatorname{Tr} \mathscr{A})\left(\Lambda_{j_{1} j_{2}}^{i_{1} i_{2}} \Gamma_{i_{1} i_{2}}^{j_{1} j_{2}} \hookrightarrow \vec{D} \cdot \mathrm{P}\right)}}=
+%         \underbrace{\widetilde{\left\langle \frac{\notin \emptyset}
+%         {\varpi\alpha_{k\uparrow}}\middle\vert
+%         \frac{\partial_\mu T_{\mu\nu}}{2}\right\rangle}}_{\mathrm{K}_3
+%         \mathrm{Fe}(\mathrm{CN})_6} ,\forall z \in \mathbb{R}
+%     \end{equation}
+%     \end{lstlisting}
+% \end{frame}
 
