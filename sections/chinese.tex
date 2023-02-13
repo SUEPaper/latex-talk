@@ -1,0 +1,33 @@
+\section{中文写作}
+\begin{frame}{有关中文写作}
+\begin{itemize}
+    \item 宏包 \pkg{xeCJK}
+    \item 参考 \url{https://www.overleaf.com/learn/latex/chinese}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{中文示例}
+  
+    \begin{itemize}
+        \item 编辑 \texttt{hello.tex} （Windows 下不要用中文文件名，注意
+        \LaTeX{} 对文件名大小写敏感）
+        \lstset{language=[LaTeX]TeX}
+        \begin{lstlisting}[basicstyle=\ttfamily]
+\documentclass{ctexart} % 使用中文适配的 article 文档类
+\usepackage{xeCJK}%如果要在一般的文档内使用中文，一般只需引入此包
+\begin{document}
+\TeX{}你好！
+\end{document}
+          \end{lstlisting}
+        \begin{itemize}
+          \item Windows 下缺省使用中易字体
+          \item Linux、macOS 下需要注意字体（参见 \pkg{ctex} 文档）
+        \end{itemize}
+      \item 使用 \XeLaTeX{} 引擎编译，得到 PDF 文档
+        \begin{center}
+          \fbox{\textrm \TeX{}\songti 你好！}
+        \end{center}
+    \end{itemize}
+\end{frame}
+  
+

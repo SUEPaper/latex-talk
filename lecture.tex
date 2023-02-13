@@ -1,0 +1,109 @@
+\documentclass{libs/suep_format}
+\usepackage{hologo}
+\usepackage[normalem]{ulem}
+\usepackage{fontawesome5}
+\usepackage{minted}
+\usepackage{tipa}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows, shapes, shapes.multipart, backgrounds, calc, automata}
+\usepackage{algorithm2e}
+\graphicspath{{figures}}
+
+\def\rawcmd#1{\texttt{\color{DarkBlue}\footnotesize #1}}
+\def\cmd#1{\texttt{\color{DarkBlue}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{DarkBlue}\footnotesize #1}}
+\def\cmdxmp#1#2#3{\small{\texttt{\color{DarkBlue}$\backslash$#1}\{#2\}\hspace{1em}\\ $\Rightarrow$\hspace{1em} {#3}\par\vskip1em}}
+\newcommand\pkg[1]{\texttt{#1}}
+\newcommand\link[1]{\href{#1}{\faLink}}
+\setbeamersize{description width=3em}
+\newcommand{\nologo}{\setbeamertemplate{logo}{}}
+
+
+% Inserting the preamble file with the packages
+\input{libs/preamble.tex}
+% Inserting the references file
+\addbibresource{references.bib}
+
+\usefonttheme{serif,professionalfonts}
+
+\lstdefinestyle{style@inline}{
+  basicstyle   = \ttfamily,
+  keepspaces   = true
+}
+\lstMakeShortInline[style=style@inline]|
+
+% Title
+\title[\LaTeX{} 从入门到入门]{\huge \textbf{\LaTeX{} 从入门到入门}}
+% Subtitle
+% \subtitle{Subtitle of the Presentation}
+% Author of the presentation
+\author[数理学院数学系]{邓化宇}
+
+% Institute's Name
+\institute[上海电力大学]{
+    \normalsize
+    上海电力大学
+}
+% date of the presentation
+\date{\today}
+
+
+\newcommand\XeTeX{\hologo{XeTeX}}
+\newcommand\pdfTeX{\hologo{pdfTeX}}
+\newcommand\LuaTeX{\hologo{LuaTeX}}
+\newcommand\XeLaTeX{\hologo{Xe}\kern-.13em\LaTeX{}}
+\newcommand\pdfLaTeX{pdf\LaTeX{}}
+\newcommand\LuaLaTeX{Lua\LaTeX{}}
+\newcommand\BibTeX{\hologo{BibTeX}}
+
+\def\texlive{\TeX \ Live}
+\def\TL{\texlive}
+\def\mactex{Mac\TeX}
+\def\BibTeX{Bib\TeX}
+% \def\ThuThesis{ThuThesis}
+\def\XeLaTeX{\hologo{Xe}\kern-.13em\LaTeX}
+\def\pdfLaTeX{pdf\LaTeX}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Start Document of the Presentation                                           %%               
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+% insert the code style
+\input{libs/code_style}
+
+%% ---------------------------------------------------------------------------
+% First frame (with tile, subtitle, ...)
+% \begin{frame}{}
+%     %% Putting the background image in the frames
+%     \usebackgroundtemplate{\includegraphics[width=1.7\paperwidth]{libs/LOGO transparent.png}}
+%     \maketitle
+% \end{frame}
+
+
+\setbeamertemplate{background}{\includegraphics[width=\paperwidth]{figures/background.png}}
+\begin{frame}
+\maketitle
+\end{frame}
+
+
+%% ---------------------------------------------------------------------------
+% Second frame
+\begin{frame}{目录}
+    \begin{multicols}{2}
+        \tableofcontents
+    \end{multicols}
+\end{frame}
+
+\input{sections/introduction}
+\input{sections/install}
+\input{sections/content}
+\input{sections/compilation}
+\input{sections/math}
+\input{sections/packages}
+\input{sections/chinese}
+\input{sections/templates}
+\input{sections/advanced}
+\input{sections/summary}
+\input{sections/thanks}
+
+\end{document}

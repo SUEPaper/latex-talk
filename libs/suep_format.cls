@@ -1,17 +1,15 @@
-
-
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{libs/SUSTech_format}[15/12/2020 v1.0 ufc template beamer]
+\ProvidesClass{libs/suep_format}[15/12/2020 v1.0 ufc template beamer]
 
 \PassOptionsToPackage{svgnames}{xcolor}
 % 暂时添加 handout，方便调试
-\LoadClass[compress, 10pt,aspectratio=169,handout]{beamer}
+\LoadClass[compress, 10pt,aspectratio=169,handout]{ctexbeamer}
 
 %% Putting the background image in the frames
 %% Global background setting
 % \usebackgroundtemplate{\includegraphics[width=1.7\paperwidth]{libs/LOGO transparent.png}}
 
-\logo{\includegraphics[scale=0.4]{libs/lib.png}\hspace{12.5cm} \vspace{-0.2cm}}
+% \logo{\includegraphics[scale=0.4]{libs/lib.png}\hspace{12.5cm} \vspace{-0.2cm}}
 
 %% Packages Used
 \RequirePackage[utf8]{inputenc}
@@ -76,7 +74,7 @@
   \hbox{%
  
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-    \usebeamerfont{author in head/foot}\insertshortauthor~~\insertshortinstitute
+    \usebeamerfont{author in head/foot}\insertshortauthor
   \end{beamercolorbox}%
  
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot} \insertshorttitle
@@ -175,9 +173,9 @@
 }
 
 % create a command for UFC
-\newcommand{\SUSTech}{
+\newcommand{\SUEP}{
   \bfseries
-  \normalsize{Southern University of Science and Technology}
+  \normalsize{Shanghai University of Electric Power}
 }
 
 % department command

@@ -1,0 +1,240 @@
+\section{数学公式}
+
+\begin{frame}[fragile]{\LaTeX{} 数学公式}
+    \begin{itemize}
+    \item 数学公式排版是 \LaTeX{} 的绝对强项
+    \item 数学排版需要进入数学模式，引用 \texttt{amsmath} 宏包，由美国数学学会(American Mathematical Society, AMS) 提供。
+        \begin{itemize}
+        \item 用单个美元符号(\verb|$|) 包围起来的内容是 {\bf 行内公式}
+      \item 用两个美元符号(\verb|$$|) （不推荐）或 \verb|\[ \]| 包围起来的是 {\bf 单行公式} 或 {\bf 行间公式}
+        \item 使用数学环境，例如 \texttt{equation} 环境内的公式会自动加上编号，
+            \texttt{align} 环境用于多行公式（例如方程组、多个并列条件等）
+      \end{itemize}
+    \item 寻找符号
+        \begin{itemize}
+          \item 运行 \texttt{texdoc symbols} 查看符号表
+          \item S. Pakin. \emph{The Comprehensive \LaTeX{} Symbol List}
+                \url{https://ctan.org/pkg/comprehensive}
+          \item 手写识别（有趣但不全）：Detexify \url{http://detexify.kirelabs.org}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{数学模式}
+\begin{itemize}
+  \item 一切数学公式都要在数学模式下输入
+
+    \begin{itemize}
+      \item 不受外界字体命令控制
+      \item 数学模式中空格不起作用，尽管用；但不能有空行
+      \item 建议始终调用 \pkg{amsmath} 宏包 \pause
+      \item \alert{不建议用 MathType 生成 \LaTeX{} 公式}
+      \item 但可以用 MathJax \link{https://www.mathjax.org} 或 KaTeX \link{https://katex.org} 练习
+    \end{itemize} \pause
+
+  \item 行内（inline）公式
+
+    \begin{itemize}
+      \item 用一对美元符号（公式值千金）：|$...$|
+      \item 示例：理想气体状态方程可以写为 $PV=nRT$, 其中 $P$、$V$ 和 $T$
+        分别是压强、体积和绝对温度
+    \end{itemize} \pause
+
+  \item 独显（display）公式
+
+    \begin{itemize}
+      \item 无编号：|\[...\]| 或 |equation*| 环境
+      \item 编号：|equation| 环境
+      \item \alert{不要用 \texttt{\$\$...\$\$}}
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{结构}
+\begin{itemize}
+  \item<+-> 上下标
+
+    \begin{itemize}
+      \item |^| 和 |_|：|f^ab| 和 |f^{ab}|，|e^x^2|、|{e^x}^2| 和 |e^{x^2}|
+      \item 张量：|R^a{}_b{}^{cd}| 或使用 \pkg{tensor} 宏包
+      \item 配合积分、求和、极限使用：|\int|、|\sum|、|\lim|；
+        \lstinline[style=style@inline]|\(no)limits|
+    \end{itemize}
+
+  \item<+-> 分式
+
+    \begin{itemize}
+      \item |\frac{〈分子〉}{〈分母〉}|
+      \item 行内分式、小分式不好看：改用 |a/b|，或改用独显公式
+      \item \alert{不推荐 \texttt{\textbackslash dfrac}}
+    \end{itemize}
+
+  \item<+-> 根式
+
+    \begin{itemize}
+      \item |\sqrt[〈次数〉]{〈内容〉}|
+      \item 复杂情况改用分数指数：|{...}^{1/n}|
+    \end{itemize}
+
+  \item<+-> 矩阵与行列式
+
+    \begin{itemize}
+      \item |matrix|、|pmatrix|、|vmatrix| 等环境
+      \item 语法类似表格：|&| 分列，|\\| 换行
+      \item 推荐 \pkg{physics} 宏包
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{括号与定界符}
+\begin{itemize}
+  \item<+-> 基本括号
+
+    \begin{itemize}
+      \item |(...)|、|[...]|、|\{...\}|、
+      \item 绝对值、范数：\lstinline[style=style@inline]+|...|+ 或 |\vert...\vert|、|\Vert...\Vert|
+      \item Dirac 符号：|\langle...\rangle|、\lstinline[style=style@inline]+|...\rangle+
+    \end{itemize}
+
+  \item<+-> 自动调节
+
+    \begin{itemize}
+      \item |\left(...\right)| 等
+      \item 大型括号是拼出来的
+    \end{itemize}
+
+  \item<+-> 手动调节
+
+    \begin{itemize}
+      \item 只有 4 + 1 档：|\big|、|\Big|、|\bigg|、|\Bigg|
+      \item 声明左中右：|\bigl|、|\bigm|、|\bigr| 等
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{符号与字体}
+\begin{itemize}
+  \item 符号不是按钮点出来的，也不是天上掉下来的 \pause
+
+    \begin{itemize}
+      \item （几乎）所有的符号都由字体提供 \pause
+      \item 分清「它是什么」和「它长什么样」（术语：character 和 glyph）
+    \end{itemize} \pause
+
+  \item 寻找符号
+
+    \begin{itemize}
+      \item 最常用的额外字体包：\pkg{amssymb}
+      \item \LaTeX{} 公式大全 \link{https://suepaper.github.io/math201/docs/latex/math}
+      \item 在线\LaTeX{}公式编辑器（支持图片识别） \link{https://www.latexlive.com/home}
+    \end{itemize} \pause
+
+  \item 数学字体
+
+    \begin{itemize}
+      \item 你们要的「Times New Roman」：\pkg{newtxmath} 宏包
+      \item \alert{不要用 \pkg{times} 和 \pkg{mathptmx} 宏包}
+      \item 加粗：使用 \pkg{bm} 宏包的 |\bm| 命令（|\mathbf| 只有直立的字母）
+    \end{itemize} \pause
+
+  \item 新方案：\pkg{unicode-math}
+
+    \begin{itemize}
+      \item 符号、字体、样式精调的一揽子解决方案
+      \item 彻底修改底层，不可与传统方案混用
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{多行公式}
+\begin{itemize}
+  \item 以下均要求 \pkg{amsmath} 宏包
+  \item 独立数学环境
+
+  \begin{itemize}
+    \item 多行居中 |gather|、多行手动对齐 |align|、跨行 |multiline|
+    \item 手动对齐：关系符前加 |&|
+  \end{itemize}
+
+  \item 内联数学环境
+
+  \begin{itemize}
+    \item 条件 |cases|、多行对齐 |split|、|...ed|
+  \end{itemize} \pause
+
+  \item 精细调整
+
+  \begin{itemize}
+    \item \pkg{mathtools}、\pkg{empheq} 等
+    \item 自动换行：\pkg{breqn}
+    \item \alert{避免使用 \texttt{eqnarray} 环境}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+    \frametitle{小露身手}
+
+\begin{columns}
+\begin{column}{.5\textwidth}
+\lstset{language=[LaTeX]TeX}
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+$V = \frac{4}{3}\pi r^3$
+
+\[
+    V = \frac{4}{3}\pi r^3
+\]
+
+\begin{equation}
+\label{eq:vsphere}
+V = \frac{4}{3}\pi r^3
+\end{equation}
+\end{lstlisting}
+\end{column}
+
+\begin{column}{.5\textwidth}
+    $V = \frac{4}{3}\pi r^3$
+
+    \[
+        V = \frac{4}{3}\pi r^3
+    \]
+\begin{equation}
+\label{eq:vsphere}
+    V = \frac{4}{3}\pi r^3
+\end{equation}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{小露身手}
+  \begin{equation*}
+    \oint \mathscr{D}[x(t)] \sqrt{\frac{3 \pi^{2}-\sum_{q=0}^{\infty}(z+\hat{L})^{q} \exp \left(\mathrm{i}^{2} \hbar x\right)}{(\operatorname{Tr} \mathscr{A})\left(\Lambda_{j_{1} j_{2}}^{i_{1} i_{2}} \Gamma_{i_{1} i_{2}}^{j_{1} j_{2}} \hookrightarrow \vec{D} \cdot \mathrm{P}\right)}}=
+    \underbrace{\widetilde{\left\langle \frac{\notin \emptyset}
+    {\varpi\alpha_{k\uparrow}}\middle\vert
+    \frac{\partial_\mu T_{\mu\nu}}{2}\right\rangle}}_{\mathrm{K}_3
+    \mathrm{Fe}(\mathrm{CN})_6} ,\forall z \in \mathbb{R}
+  \end{equation*}
+
+  \begin{lstlisting}[basicstyle=\ttfamily\small]
+    \begin{equation} % \usepackage{unicode-math}
+        \oint \mathscr{D}[x(t)] \sqrt{\frac{3 \pi^{2}-\sum_{q=0}^{\infty}(z+\hat{L})^{q} \exp \left(\mathrm{i}^{2} \hbar x\right)}{(\operatorname{Tr} \mathscr{A})\left(\Lambda_{j_{1} j_{2}}^{i_{1} i_{2}} \Gamma_{i_{1} i_{2}}^{j_{1} j_{2}} \hookrightarrow \vec{D} \cdot \mathrm{P}\right)}}=
+        \underbrace{\widetilde{\left\langle \frac{\notin \emptyset}
+        {\varpi\alpha_{k\uparrow}}\middle\vert
+        \frac{\partial_\mu T_{\mu\nu}}{2}\right\rangle}}_{\mathrm{K}_3
+        \mathrm{Fe}(\mathrm{CN})_6} ,\forall z \in \mathbb{R}
+    \end{equation}
+    \end{lstlisting}
+
+
+\end{frame}
+

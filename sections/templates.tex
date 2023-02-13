@@ -1,36 +1,3 @@
-\subsection{中文写作}
-\begin{frame}{有关中文写作}
-\begin{itemize}
-    \item 宏包 \pkg{xeCJK}
-    \item 参考 \url{https://www.overleaf.com/learn/latex/chinese}
-\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{中文示例}
-  
-    \begin{itemize}
-        \item 编辑 \texttt{hello.tex} （Windows 下不要用中文文件名，注意
-        \LaTeX{} 对文件名大小写敏感）
-        \lstset{language=[LaTeX]TeX}
-        \begin{lstlisting}[basicstyle=\ttfamily]
-\documentclass{ctexart} % 使用中文适配的 article 文档类
-\usepackage{xeCJK}%如果要在一般的文档内使用中文，一般只需引入此包
-\begin{document}
-\TeX{}你好！
-\end{document}
-          \end{lstlisting}
-        \begin{itemize}
-          \item Windows 下缺省使用中易字体
-          \item Linux、macOS 下需要注意字体（参见 \pkg{ctex} 文档）
-        \end{itemize}
-      \item 使用 \XeLaTeX{} 引擎编译，得到 PDF 文档
-        \begin{center}
-          \fbox{\textrm \TeX{}\songti 你好！}
-        \end{center}
-    \end{itemize}
-\end{frame}
-  
-
 \section{实践}
 \subsection{论文排版}
 
@@ -66,7 +33,6 @@
       \begin{itemize}
         \item CTAN \link{https://ctan.org} 或 GitHub \href{https://github.com}{\faGithub}
         \item 期刊官网
-        \item SUSTech LaTex 模板目录 \link{https://github.com/SUSTC/latex-template}
         \item 「U 盘拷给你的模板一定是过时的」
       \end{itemize}
   \end{itemize}
@@ -106,20 +72,17 @@
 
 
 
-\subsection{作业与论文中的常用模板}
-\begin{frame}{几种在作业/论文中常用的模版}
+\subsection{作业中的常用模板}
+\begin{frame}{在作业中常用的模版}
     \begin{columns}[c]
     \begin{column}{.45\textwidth}
         \begin{itemize}
-            \item 毕业论文模版 \url{https://github.com/SUSTech-CRA/sustech-master-thesis}
-            \item IEEE \url{https://template-selector.ieee.org/secure/templateSelector/publicationType}
-            \item 同学制作的作业模板 \url{https://github.com/ziqin/LaTeX-SUSTechHomework}
+            \item math201实验报告模板 \link{https://github.com/SUEPaper/math201-latex-report}
+            \item 上海电力大学学位论文模板SUEPThesis(目前还在开发中。。。) \link{https://github.com/SUEPaper/SUEPThesis}
         \end{itemize}
     \end{column}
     \begin{column}{.45\textwidth}
-        \includegraphics[width=0.75\textwidth]{docs/IEEE_template_1.pdf}
+        \includegraphics[width=0.75\textwidth]{examples/math201.png}
       \end{column}
     \end{columns}
-    
-
 \end{frame}

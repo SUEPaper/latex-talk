@@ -4,14 +4,6 @@
 
 \section{总结}
 
-\begin{frame}{常见 \LaTeX{} 困惑}
-  \begin{itemize}
-    \item \alert{编译不通过} 缺少必要宏包，命令拼写错误，括号未配对等
-    \item \alert{表格图片乱跑} 非问题，\LaTeX{} 浮动定位算法 \link{https://liam.page/2017/04/30/floats-in-LaTeX-the-positioning-algorithm/}
-    \item \alert{段落间距变大} 非问题，\LaTeX{} 排版算法
-    \item \alert{参考文献} 推荐使用 \BibTeX 或者 Bib\LaTeX（视模板而定），也可以手写 \cmd{bibitem} \link{https://github.com/hushidong/biblatex-gb7714-2015}
-  \end{itemize}
-\end{frame}
 
 \begin{frame}{系统学习}
   \begin{itemize}
@@ -70,6 +62,49 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}{常见 \LaTeX{} 困惑}
+  \begin{itemize}
+    \item \alert{编译不通过} 缺少必要宏包，命令拼写错误，括号未配对等
+    \item \alert{表格图片乱跑} 非问题，\LaTeX{} 浮动定位算法 \link{https://liam.page/2017/04/30/floats-in-LaTeX-the-positioning-algorithm/}
+    \item \alert{段落间距变大} 非问题，\LaTeX{} 排版算法
+    \item \alert{参考文献} 推荐使用 \BibTeX 或者 Bib\LaTeX（视模板而定），也可以手写 \cmd{bibitem} \link{https://github.com/hushidong/biblatex-gb7714-2015}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{排查错误}
+    \begin{itemize}
+      \item<+-> 编译失败了？
+        \begin{itemize}
+          \item 语法错误
+            \begin{itemize}
+              \item 大括号不匹配
+              \item 环境头尾不匹配
+              \item 没有对特殊字符进行转义（|\|、|_|、|&|）
+            \end{itemize}
+  
+        \item 命令用不对
+          \begin{itemize}
+            \item 拼写错误
+            \item 参数有几个？
+          \end{itemize}
+        \item ……
+      \end{itemize}
+  
+      \item<+-> 查找出错点
+      \begin{itemize}
+        \item 在编辑器的“问题”栏查看报错信息
+        \item 在 |.log| 文件搜索“Error”
+        \item 注释掉没问题的内容重新编译
+      \end{itemize}
+  
+      \item<+-> 我看不懂
+      \begin{itemize}
+        \item<+-> \alert{「特大好消息，本群已和各大搜索引擎达成战略合作」}
+      \end{itemize}
+    \end{itemize}
+  \end{frame}
+
 \begin{frame}{一点人生的经验}
   \begin{itemize}
     \item 不要使用中文路径
@@ -90,64 +125,60 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]
-  \frametitle{Git版本管理}
-  \begin{itemize}
-    \item 版本管理的必要性
-      \begin{itemize}
-        \item 远离「初稿，第二稿……终稿，终稿（打死也不改了）」命名
-        \item 方便与他人协同合作
-      \end{itemize}
-    \item 基本用法
-      \begin{itemize}
-        \item 跟踪更改：|git init|、|git add|、|git commit|
-        \item 撤销与回滚：|git reset|、|git revert|
-        \item 分支与高级用法：|git branch|、|git checkout|、|git rebase|
-        \item 远端仓库操作：|git pull|、|git push|、|git fetch|
-        \item 推荐用 VS Code 等进行可视化操作
-      \end{itemize}
-    \item 在线 Git 服务
-      \begin{itemize}
-        \item GitHub \url{https://github.com}
-        \item CRA 代码托管服务（基于 GitLab） \url{https://git.cra.moe/}
-      \end{itemize}
-  \end{itemize}
-  \end{frame}
 
-% 寻求帮助
-\begin{frame}{求助}
-  \begin{columns}[c]
-    \begin{column}{.45\textwidth}
+
+
+
+\begin{frame}{获取帮助}
+  \begin{itemize}
+    \item<+-> 搜索、提问的姿势
+  
       \begin{itemize}
-        \item 计协交流社区 CRA Community \url{https://c.cra.moe/}
-        \item 南科大 \LaTeX{} 学习交流群：119667812
-        \item \TeX StackExchange \url{https://tex.stackexchange.com/}
-        \item Google, Bing, etc.
+        \item 优先使用英文 + Google (if possible)
+        \item 提供最小工作示例（MWE, minimal working example）
           \begin{itemize}
-            \item 使用\textbf{英语}搜索
+            \item 能复现问题
+            \item 尽量不带冗余内容
+            \item 策略：二分查找
+          \end{itemize}
+        \item 别用手机拍屏幕\CJKsout*{，跪下来求你了}
+        \item 遵循社区行为准则（code of conduct）
+      \end{itemize}
+  
+    \item<+-> 在线论坛
+  
+      \begin{itemize}
+        \item \TeX{} - \LaTeX{} Stack Exchange \link{https://tex.stackexchange.com}
+        \item \CTeX{} 临时论坛 \link{https://github.com/CTeX-org/forum}
+        \item \LaTeX{} 工作室 \link{https://www.latexstudio.net}
+          \begin{itemize}
+            \item 资源需要甄别，且部分内容需付费
           \end{itemize}
       \end{itemize}
-    \end{column}
-    \begin{column}{.45\textwidth}
-      \includegraphics[width=\textwidth]{TFZsuperellipse-crop.pdf}
-    \end{column}
-  \end{columns}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{你也可以帮助}
+
   \begin{itemize}
-    \item 错误反馈、改进建议：GitHub Issues \link{https://github.com/SUSTech-CRA/latex-talk/issues}
-    \item 出力维护：\LaTeX{} 宏包、bug 修复、模板编写 \link{https://github.com/SUSTC/latex-template}，VS Code插件维护 \link{https://github.com/James-Yu/LaTeX-Workshop}
-    \item 科普、答疑
-    \item \sout{来当主讲人}
+    \item 文档翻译
+  
+      \begin{itemize}
+        \item \pkg{lshort-zh-cn} \link{https://github.com/CTeX-org/lshort-zh-cn}
+        \item \pkg{learnlatex.org/zh} \link{https://github.com/CTeX-org/learnlatex.github.io}
+      \end{itemize}
+  
+    \item 宏包开发与维护
+  
+      \begin{itemize}
+        \item 不妨先从修 Github Issues 开始
+        \item 参与SUEPThesis \link{https://github.com/SUEPaper/SUEPThesis} 的讨论，你的经验也可以解他人之忧
+        \item 科普、答疑
+        \item 欢迎参与维护 \pkg{SUEPThesis}
+      \end{itemize}
+  
+    \item \CJKsout{来当主讲人}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{感谢}
-  \begin{itemize}
-    \item 南方科技大学图书馆：为我们提供讲座机会与场地
-    \item 清华 thu-latex-talk \link{https://github.com/tuna/thulib-latex-talk} 为我们提供思路
-    \item 袁通同学提供的Beamer模板 \url{https://github.com/Tonanguyxiro/SUSTech-Slide-Template-LateX-EN}
-    \item 本幻灯片下载地址 \url{https://github.com/SUSTech-CRA/latex-talk}
-  \end{itemize}
-\end{frame}
+

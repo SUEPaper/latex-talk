@@ -1,0 +1,57 @@
+\section{编译}
+
+\begin{frame}[fragile]
+  \frametitle{引擎与格式}
+  \begin{itemize}
+    \item<+-> \textbf{引擎}：\TeX{} 的实现
+
+      \begin{itemize}
+        \item \pdfTeX{}：直接生成 PDF，支持 micro-typography
+        \item \XeTeX{}：支持 Unicode、OpenType 与复杂文字编排（CTL）
+        \item \LuaTeX{}：支持 Unicode、OpenType，内联 Lua
+        \item (u)p\TeX{}：日本方面推动，生成 |.dvi|，（支持 Unicode）
+        \item Ap\TeX{}：底层 CJK 支持，内联 Ruby，Color Emoji（手动斜眼笑）
+      \end{itemize}
+
+    \item<+-> \textbf{格式}：\TeX{} 的语言扩展（命令封装）
+
+      \begin{itemize}
+        \item plain \TeX{}：Knuth 同志专用
+        \item \LaTeX{}：排版科技类文章的事实\textit{de facto}标准
+        \item Con\TeX t：基于 \LuaTeX{} 实现，优雅、易用（吗？）
+      \end{itemize}
+
+    \item<+-> \textbf{程序}：引擎 + dump 之后的格式代码
+
+      \begin{itemize}
+        \item \alert{英文文章：\pdfLaTeX{}、\XeLaTeX{} 或 \LuaLaTeX{}}
+        \item \alert{中文文章：\XeLaTeX{} 或 \LuaLaTeX{}}
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{编译}
+\begin{itemize}
+\item 现代 \TeX{} 引擎均可直接生成 PDF \pause
+\item 命令行
+
+    \begin{itemize}
+    \item |pdflatex|/|xelatex|/|lualatex| + |<文件名>[.tex]|
+    \item 多次编译：读取并排版中间文件 \pause
+    \item 推荐 \pkg{latexmk}：|latexmk [<选项>] <文件名>|
+
+        \begin{itemize}
+        \item |latexmk -xelatex main|
+        \end{itemize}
+    \end{itemize} \pause
+
+\item 编辑器
+
+    \begin{itemize}
+    \item 按钮的背后仍然是命令
+    \item |PATH| 环境变量：确定可执行文件的位置
+    \item VS Code：配置 |tools| 和 |recipes|
+    \end{itemize}
+\end{itemize}
+\end{frame}

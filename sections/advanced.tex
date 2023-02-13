@@ -1,0 +1,104 @@
+\section{进阶扩展}
+
+% \begin{frame}[fragile]
+% \frametitle[Markdown]{%
+%   Markdown \link{https://liam.page/2020/03/30/writing-manuscript-in-Markdown-and-typesetting-with-LaTeX}}
+% \begin{columns}
+% \lstset{%
+%   moredelim    = [s][emphstyle]{*}{*},
+%   moredelim    = [s][keywordstyle]{**}{**},
+%   moredelim    = [s][emphstyle2]{\`}{\`},
+%   moredelim    = [s][emphstyle2]{\`\`\`}{\`\`\`},
+%   moredelim    = [l][keywordstyle2]{\#},
+%   moredelim    = [is][keywordstyle2]{+}{+},
+%   moredelim    = *[is][\itshape]{!}{!},
+%   moredelim    = [is][keywordstyle]{(+}{+)},
+%   moredelim    = [is][emphstyle2]{(-}{-)},
+%   basicstyle   = \scriptsize\ttfamily,
+%   keywordstyle = [1]\bfseries\color{keyword},
+%   keywordstyle = [2]\bfseries\color{texcs},
+%   emphstyle    = [1]\itshape\color{emph1},
+%   emphstyle    = [2]\color{inline}}
+% \begin{column}{0.48\textwidth}
+%   \begin{lstlisting}[gobble=2]
+%   # Markdown syntax
+
+%   This is **bold text**.
+%   This text is *italicized*.
+%   Use `git status` to list all
+%   new or modified files.
+
+%   Block code:
+
+%   ```
+%   git status
+%   git add
+%   git commit
+%   ```
+
+%   Quotation:
+
+%   +>+ !Markdown uses email-style `>`!
+%   +>+ !characters for blockquoting.!
+%   \end{lstlisting}
+% \end{column}
+% \begin{column}{0.48\textwidth}
+%   \begin{lstlisting}[gobble=2]
+%   ## List
+
+%   ### Bullet list
+
+%   +*+ apples
+%   +*+ oranges
+%   +*+ pears
+
+%   ### Numbered list
+
+%   +1.+ wash
+%   +2.+ rinse
+%   +3.+ repeat
+
+%   +---+
+
+%   Link: from [(+Wikipedia+)]
+%   ((-https://en.wikipedia.org/wiki/-)
+%   (-Markdown-))
+
+%   \end{lstlisting}
+% \end{column}
+% \end{columns}
+% \vspace{-0.6cm}
+% \end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Git}
+\begin{itemize}
+  \item<+-> 版本管理的必要性
+
+    \begin{itemize}
+      \item 远离「初稿，第二稿，第三稿……终稿，终稿（打死也不改了）」
+      \item 有底气做大范围修改、重构
+      \item 方便与他人协同合作
+    \end{itemize}
+
+  \item<+-> 基本用法
+
+    \begin{itemize}
+      \item 把大象放进冰箱：|git init|、|git add|、|git commit|
+      \item 时空穿梭：|git reset|、|git revert|
+      \item 平行宇宙：|git branch|、|git checkout|、|git rebase|
+      \item 推荐用 VS Code 等进行可视化操作
+      \item 参考链接：\link{https://git-scm.com/book}
+        \link{https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000}
+    \end{itemize}
+
+  \item<+-> GitHub \href{https://github.com}{\faGithub} \& more
+
+    \begin{itemize}
+      \item 远程 Git 仓库
+      \item Clone \& fork
+      \item Issues \& pull requests
+      \item<+-> \alert{提醒：绑定 \texttt{.edu} 邮箱可以有更多优惠}
+    \end{itemize}
+\end{itemize}
+\end{frame}
