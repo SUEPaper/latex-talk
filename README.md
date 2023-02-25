@@ -9,4 +9,4 @@
 * [清华大学 thu-latex-talk](https://github.com/tuna/thulib-latex-talk)
 * [南方科技大学 latex-talk](https://github.com/SUSTech-CRA/latex-talk)
 * [南京大学 latex-talk](https://git.nju.edu.cn/atXYblip/latex-lecture)
-* [华东师范大学 潘建瑜 《\LaTeX{} 科技排版入门》](https://math.ecnu.edu.cn/~jypan/Latex/Latex_Talk2018.pdf)
+* [华东师范大学 潘建瑜 《LaTeX 科技排版入门》](https://math.ecnu.edu.cn/~jypan/Latex/Latex_Talk2018.pdf)
